@@ -1,6 +1,7 @@
 {
   "name": "inspect-brk",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "description": "A small helper to make debugging Node more convenient.",
   "license": "MIT",
   "main": "lib/index.js",
   "bin": {
@@ -14,6 +15,7 @@
     "lib"
   ],
   "dependencies": {
+    "find-up": "^2.1.0"
   },
   "engines": {
     "node": ">=8.9.0"

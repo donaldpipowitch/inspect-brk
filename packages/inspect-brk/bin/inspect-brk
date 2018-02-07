@@ -1,2 +1,14 @@
 #!/usr/bin/env node
-require('../lib');
+const { inspectBrk } = require('../lib');
+const [_a, _b, cmd, ...bins] = process.argv;
+
+try {
+  inspectBrk(cmd, bins);
+} catch (err) {
+  if (err.stack) {
+    console.log(err);
+  } else {
+    console.log(err.toString());
+  }
+  process.exitCode = 1;
+}

@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack.build.js"
+    "build": "webpack --config webpack.build.js",
+    "debug:build": "inspect-brk build webpack"
   },
   "devDependencies": {
+    "inspect-brk": "*",
     "webpack": "^3.10.0"
   }
 }

@@ -61,4 +61,4 @@ That's why I created `inspect-brk`. It turns your example from above into this:
 
 You call `inspect-brk` and pass the name of the script you want to debug (in this case `build`) and than you pass one or more binary names which you want to inspect (in this case just `webpack`).
 
-I 
+Nothing big, but maybe helpful for some people 💕

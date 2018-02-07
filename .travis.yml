@@ -1,17 +1,22 @@
 language: node_js
 node_js:
-  - "9"
-  - "8"
+- '9'
+- '8'
 
-cache: yarn  
+cache: yarn
 
 script:
-  - yarn test
+- yarn test
 
 jobs:
   include:
-    - stage: deploy
-      script:
-        # publish on tag
-        - if [ -n "$TRAVIS_TAG" ]; then yarn workspace-publish; fi
-      node: "9"
+  - stage: deploy
+    script:
+    # publish on tag
+    - if [ -n "$TRAVIS_TAG" ]; then yarn workspace-publish; fi
+    node: '9'
+
+env:
+  global:
+    # encrypted NPM_TOKEN
+    secure: Nrn4IldtDgdYKKXnQxdlzpA2EJN6SJmNMvUsVmv4K7kiUJ3UQ16qCinYrhM27dY5XLxrAROByjxODKktNNzGAb0RSfYci0thtRJeN8EjRLRhSvhSaDzamCwvVzH+7sgjbgNesokZCjtlWtfXNn/rM6j1vzKyMIPGC+mGxQxWX7sVwxO5/HAfxlx/0fsAvbwnCnNu3R2KLFeUNRAd/SA7upvIe8KuIWTRJR65sadot1VRD7CUYIF/tkn98jYdV7so7HuuxZbH2r6l8sHqHwMXlndStQA7o24ashpGoG5ZCRqjY60mE4aItgjp7i5IHp7zKKwTz8e8Wz5M7vo1cZbtD4JzKDRAI4F1JDxFegb1uEJVWHSqXoA0+EFniRNhKftMGAWQvLuP2ndJZm7/UvyLMycbXNd75YlqRj16rLJ2hj1ijAGVGogHGeZ7FR7fJEKPyHsgV6drhUG/haF02dKy/skgK9Q+BZ5taZqnwvRqWY9qJdFYOp4rAR8/b0PQpBLzssVOXBW9EdsjZPPo/q45ez9H6ay8SESkG6z1mjxW/D3KwBD8vxne2uNOP6A8cS33K2KnOfsY2QJBeul39jkPzTgP+eib0KivCKqP/fvJDOhimSRz0BYadGJzrV24RMGNfNvTuyQMuwNXNT6kETQXxDbekQh5uWarq/Rutao909w=

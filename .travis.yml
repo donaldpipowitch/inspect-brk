@@ -13,7 +13,7 @@ jobs:
   - stage: deploy
     script:
     # publish on tag
-    - if [ -n "$TRAVIS_TAG" ]; then yarn workspace-publish; fi
+    - if [ -n "$TRAVIS_TAG" ]; then yarn node_modules/.bin/workspace-publish; fi
     node: '9'
 
 env:

@@ -1,5 +1,11 @@
 {
   "name": "example-webpack-plugin",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.build.js"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }

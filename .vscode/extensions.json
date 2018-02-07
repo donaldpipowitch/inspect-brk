@@ -1,0 +1,6 @@
+{
+  "recommendations": [
+    // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+    "esbenp.prettier-vscode"
+  ]
+}

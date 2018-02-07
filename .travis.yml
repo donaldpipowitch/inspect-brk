@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "9"
+  - "8"
+
+cache: yarn  
+
+script:
+  - yarn test
+
+jobs:
+  include:
+    - stage: deploy
+      script:
+        # publish on tag
+        - if [ -n "$TRAVIS_TAG" ]; then yarn workspace-publish; fi
+      node: "9"
